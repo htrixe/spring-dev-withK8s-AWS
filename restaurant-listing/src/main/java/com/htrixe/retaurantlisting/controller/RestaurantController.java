@@ -4,6 +4,7 @@ import com.htrixe.retaurantlisting.dto.RestaurantDTO;
 import com.htrixe.retaurantlisting.service.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,7 +25,7 @@ public class RestaurantController {
         return new ResponseEntity<>(allRestaurants, HttpStatus.OK);
     }
 
-    @PostMapping("/addRestaurant")
+    @PostMapping(value ="/addRestaurant", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<RestaurantDTO> saveRestaurant(@RequestBody RestaurantDTO restaurantDTO) {
         RestaurantDTO restaurantAdded = restaurantService.addRestaurantInDB(restaurantDTO);
         return new ResponseEntity<>(restaurantAdded, HttpStatus.CREATED);
