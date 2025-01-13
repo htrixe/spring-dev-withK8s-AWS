@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "8da6b2c5-37a2-4951-9e48-f5890f32d0f3",
+		"name": "aws-spring-k8s",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Restaurants",
+			"item": [
+				{
+					"name": "fetchById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9091/restaurant/fetchById/403",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"restaurant",
+								"fetchById",
+								"403"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create Restaurant",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"restaurant 2\",\n\t\"address\": \"Adddres Line 2\",\n\t\"city\":\"city 2\",\n\t\"restaurantDescription\":\"Restaurant Description 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9091/restaurant/addRestaurant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"restaurant",
+								"addRestaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetchAllRestaurants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9091/restaurant/fetchAllRestaurants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"restaurant",
+								"fetchAllRestaurants"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "addUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userName\": \"user2\",\n\t\"userPassword\": \"12345\",\n\t\"city\":\"city 2\",\n\t\"address\":\"address 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9093/user/addUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9093",
+							"path": [
+								"user",
+								"addUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetchUserById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9093/user/fetchUserById/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9093",
+							"path": [
+								"user",
+								"fetchUserById",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "food catgalogue",
+			"item": [
+				{
+					"name": "addFoodItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"itemName\": \"food fry\",\n\t\"itemDescription\": \" Item description\",\n\t\"veg\":true,\n    \"price\": 350,\n    \"restaurantId\": 402,\n\t\"quantity\":0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9092/foodCatalogue/addFoodItem",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9092",
+							"path": [
+								"foodCatalogue",
+								"addFoodItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetchRestaurantAndFoodItemsById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "saveOrder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
